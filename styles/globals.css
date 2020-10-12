@@ -55,9 +55,11 @@ a.nav-link {
   transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-origin: center center;
   text-decoration: none;
+  padding: 0.75rem 1.5rem;
 }
 
 a.nav-link:hover {
   transform: scale(1.1);
   font-weight: bold;
+  background-color: #f7f7f7;
 }
