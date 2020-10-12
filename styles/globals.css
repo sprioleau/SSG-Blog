@@ -1,10 +1,14 @@
+:root {
+  --c1: #622ff0;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 1.5rem;
   width: 100%;
   min-height: 100vh;
   background-color: #f7f7f7;
@@ -21,6 +25,11 @@ a {
   color: inherit;
 }
 
+hr {
+  margin: 1rem 0;
+  opacity: 0.5;
+}
+
 .container {
   margin: 5rem auto;
   padding: 2rem 3rem;
@@ -32,6 +41,7 @@ a {
 .path {
   font-family: monospace;
   opacity: 0.8;
+  color: var(--c1);
 }
 
 .home-container {
@@ -51,9 +61,10 @@ a {
 }
 
 a.nav-link {
-  display: block;
+  display: inline-block;
   transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transform-origin: center center;
+  border-radius: 0.5rem;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
 }
@@ -61,5 +72,26 @@ a.nav-link {
 a.nav-link:hover {
   transform: scale(1.1);
   font-weight: bold;
-  background-color: #f7f7f7;
+  background-color: var(--c1);
+  color: #fff;
+}
+
+a.nav-link.footer {
+  padding: 0;
+  background-color: transparent;
+}
+
+a.nav-link.footer:hover {
+  background-color: transparent;
+  color: var(--c1);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prev-next-wrapper> :first-child {
+  margin-right: 1.5rem;
 }

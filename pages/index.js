@@ -7,9 +7,13 @@ const Home = ({ slugs }) => {
 			<div className="home-container__wrapper">
 				<h1>Welcome to the blog 👋🏾</h1>
 				{slugs.map((slug) => (
-					<Link key={slug} href={`posts/${slug}`}>
-						<a className="nav-link">{`Go to ${slug}`}</a>
-					</Link>
+					<div key={slug}>
+						<Link href={`posts/${slug}`}>
+							<a className="nav-link">
+								{`Go to ${slug}`} <span>&#8594;</span>
+							</a>
+						</Link>
+					</div>
 				))}
 			</div>
 		</div>
